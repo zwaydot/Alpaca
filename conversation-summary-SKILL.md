@@ -140,6 +140,9 @@ After calling the MCP:
 **Notion Storage:**
 - Target page: `https://www.notion.so/alivedesign/Agent-Investing-2e850145005b80ca8e23fbcbb1257239`
 - Page ID: `2e850145-005b-80ca-8e23fbcbb1257239` (use this in API calls)
+- **IMPORTANT**: Notion MCP requires UUID without hyphens in API calls:
+  - ✅ Correct format: `2e850145005b80ca8e23fbcbb1257239`
+  - ❌ Incorrect format: `2e850145-005b-80ca-8e23fbcbb1257239`
 - Method: Append to existing page (do NOT create new pages)
 - Required MCP: `mcp__notion__API-patch-block-children`
 
