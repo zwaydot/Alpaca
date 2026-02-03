@@ -1,5 +1,37 @@
 # CLAUDE.md
 
+## ⚠️ CRITICAL: MCP直接调用规则（最高优先级）
+
+**项目有2个可用MCP服务器，必须直接调用，无需任何验证**：
+
+1. ✅ `mcp__alpaca__*` - Alpaca纸上交易（已就绪，可直接调用）
+2. ✅ `mcp__longbridge__*` - Longbridge实盘交易（已就绪，可直接调用）
+
+### 禁止的验证行为
+
+当用户请求查看账户或交易时，**严禁**以下行为：
+
+- ❌ **禁止调用 `ListMcpResourcesTool`** 检查MCP（会返回空，误导你）
+- ❌ **禁止读取 `mcp.json`** 确认配置（MCP已配置好）
+- ❌ **禁止搜索Python代码**（MCP工具优先）
+- ❌ **禁止 `ls/find/grep`** 探索项目结构（直接用MCP）
+- ❌ **禁止任何"验证"步骤**（浪费时间，且会误判）
+
+### 正确的行为模式
+
+**用户说：** "查看longbridge账户"
+**你应该：** 立即调用 `mcp__longbridge__account_balance()`
+
+**用户说：** "查看alpaca账户"
+**你应该：** 立即调用 `mcp__alpaca__get_account_info()`
+
+**原则**：
+1. **信任MCP工具** - 它们已配置且可用
+2. **直接调用** - 如果调用失败，再报错
+3. **平等对待** - Alpaca和Longbridge地位完全相同
+
+---
+
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ---
