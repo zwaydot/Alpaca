@@ -8,6 +8,14 @@
         "LONGPORT_ACCESS_TOKEN": "your-access-token-here",
         "LONGPORT_REGION": "sg"
       }
+    },
+    "alpaca": {
+      "command": "uvx",
+      "args": ["alpaca-mcp-server", "serve"],
+      "env": {
+        "ALPACA_API_KEY": "your-alpaca-api-key",
+        "ALPACA_SECRET_KEY": "your-alpaca-secret-key"
+      }
     }
   }
 }
