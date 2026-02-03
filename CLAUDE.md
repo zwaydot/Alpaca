@@ -99,17 +99,17 @@ This is a **dual-account trading system** using AI agents:
 ### Available MCP Tools
 
 **Alpaca MCP** (`mcp__alpaca__*`):
-- `get_account_info()` - Get Alpaca paper account status
-- `get_all_positions()` - Get all positions
-- `get_orders()` - Get order history
-- `place_stock_order()` - Place stock orders
+- `get_account_info()` - Get Alpaca paper account status (**no parameters**)
+- `get_all_positions()` - Get all positions (**no parameters**)
+- `get_orders(status='all', limit=10, ...)` - Get order history (**optional parameters**)
+- `place_stock_order(symbol, side, quantity, ...)` - Place stock orders (**requires parameters**)
 - And more... (see function list)
 
 **Longbridge MCP** (`mcp__longbridge__*`):
-- `account_balance()` - Get Longbridge account balance
-- `stock_positions()` - Get stock positions
-- `submit_order()` - Submit orders
-- `quote()` - Get real-time quotes
+- `account_balance()` - Get Longbridge account balance (**no parameters**)
+- `stock_positions()` - Get stock positions (**no parameters**)
+- `submit_order(symbol, side, order_type, ...)` - Submit orders (**requires parameters**)
+- `quote(symbols)` - Get real-time quotes (**requires symbols list**)
 - And more... (see function list)
 
 ### MCP Usage Rules for Claude
