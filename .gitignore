@@ -1,6 +1,12 @@
 # Environment
 .env
 .venv/
+
+# System
+.DS_Store
+
+# Claude MCP config (contains sensitive keys)
+.claude/mcp.json
 __pycache__/
 *.pyc
 *.pyo

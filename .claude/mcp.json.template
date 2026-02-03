@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "longbridge": {
+      "command": "/path/to/your/longport-mcp",
+      "env": {
+        "LONGPORT_APP_KEY": "your-app-key-here",
+        "LONGPORT_APP_SECRET": "your-app-secret-here",
+        "LONGPORT_ACCESS_TOKEN": "your-access-token-here",
+        "LONGPORT_REGION": "sg"
+      }
+    }
+  }
+}
